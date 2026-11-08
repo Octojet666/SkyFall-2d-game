@@ -1,20 +1,20 @@
 # SkyFall
 
-A 2D side-scrolling fantasy RPG written in plain JavaScript. No engine, no
-framework, no build step — just ES modules, a canvas, Web Audio and
-localStorage. Walk six connected regions, fight with weapon-specific swings,
-loot and equip gear, level up, learn skills, take quests from NPCs, and save
+A 2D side scrolling fantasy RPG written in plain JavaScript. No engine or 
+framework or no build step, just ES modules, a canvas and just Web Audio and
+local storage. Walk, fight with weapon-specific swings,
+loot and equip gear, level up, learn skills, take quests from NPCs and save
 your run.
 
 **Read this first: this repo contains code only.** I did not commit the pixel
 art I developed the game against, because the sheets are third-party assets
 whose licences don't allow redistributing the files. See
-[Artwork](#artwork-you-need-to-supply) below — the game boots and runs, but it
+[Artwork](#artwork-soon-will-be-added) below — the game boots and runs, but it
 draws plain shapes until you drop your own sprites into `assets/`.
 
 ## Running it
 
-ES modules need to be served over HTTP, so `file://` will not work. Any static
+SF modules need to be served over HTTP, so `file://` will not work. Any static
 server is fine:
 
 ```
@@ -44,23 +44,10 @@ while editing. Nothing is installed or built.
 | Quest journal | **J** |
 | Close panel / pause | **Esc** |
 
-## What's in the code
-
-- Fixed 320×180 canvas, integer-scaled so pixels stay sharp.
-- Fixed-timestep game loop, camera with smoothing and shake, tile collision,
-  input handling, entity manager.
-- Systems for combat, inventory, equipment, shop, quests, dialogue, progression,
-  crafting, save/load and sound.
-- Six regions with their own tilesets, weather and enemy tables, plus bosses.
-- Five playable characters that can be switched at any time from the pause menu
-  or the **C** key. The choice is cosmetic and is written into the save.
-- A code-drawn HUD and menus; no UI framework, no external fonts.
-- Saves in `localStorage` under `skyfall.save.v2`, with validation and a
-  corrupt-save fallback.
 
 ## Artwork you need to supply
 
-`src/data/spriteManifest.js` lists every image the renderer asks for, and
+`src/data/spriteManifest.js` lists every image the renderer asks for and
 `src/engine/Assets.js` loads that list once at startup. If a file is missing the
 load fails quietly and the game falls back to procedural drawing, so you can
 start it with an empty `assets/` folder and fill it in piece by piece. Expect a
@@ -101,23 +88,9 @@ them from the authors and follow their terms:
 
 That "no redistribution" clause is exactly why this repository ships without
 them: putting the PNGs in a public repo would be handing out the asset packs.
-Any art you add is your call — check its licence before you publish.
+Any art you add is your call - check its licence before you publish.
 
-## Tests
 
-```
-node tests/save.test.mjs
-```
-
-The save test runs the serialisation and validation rules against an in-memory
-storage stub, so it needs nothing installed.
-
-## Debug hooks
-
-The game exposes `window.__game`, `window.__player`, `window.__menu` and
-`window.__step(frames, dt)` for poking at a live session from the console.
-`__step` advances the simulation deterministically, which is handy because
-browsers throttle animation frames in background tabs.
 
 ## Licence
 
