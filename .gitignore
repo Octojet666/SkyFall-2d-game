@@ -1,12 +1,8 @@
-# Editor and OS clutter
 .DS_Store
 Thumbs.db
-.vscode/
 .idea/
 
-# Python bits from the dev server
 __pycache__/
 *.pyc
 
-# Logs
 *.log
