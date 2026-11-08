@@ -1,3 +1,4 @@
+
 # SkyFall
 
 A 2D side scrolling fantasy RPG written in plain JavaScript. No engine or 
@@ -11,6 +12,10 @@ art I developed the game against, because the sheets are third-party assets
 whose licences don't allow redistributing the files. See
 [Artwork](#artwork-soon-will-be-added) below — the game boots and runs, but it
 draws plain shapes until you drop your own sprites into `assets/`.
+
+<img width="800" height="450" alt="Recording2026-11-08143540-ezgif com-video-to-gif-converter (1)" src="https://github.com/user-attachments/assets/6be79100-d2ab-40b6-a979-56cf63c5650c" />
+<img width="800" height="450" alt="Recording2026-11-08143540-ezgif com-video-to-gif-converter" src="https://github.com/user-attachments/assets/10634e51-e5ff-4f27-a915-e4d76962c7c2" />
+
 
 ## Running it
 
